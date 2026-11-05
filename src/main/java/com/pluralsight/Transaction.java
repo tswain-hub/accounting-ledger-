@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Transaction {
 
-    private final LocalDate;
+    private final LocalDate date;
     private final LocalTime time;
     private final String description;
     private final String vendor;
@@ -43,19 +43,20 @@ public class Transaction {
 
     public BigDecimal getAmount() {
         return amount;
-
+    }
         // toString method
 
-        String toString; {
+        @Override
+         public String toString(){
 
-            return  date + "|" +
+       return       date + "|" +
                     time + "|" +
                     description + "|" +
                     vendor + "|" +
-                    amount.setScale(2).toPlainString();
+                    amount;
         }
 
     }
-    }
-}
+
+
 
